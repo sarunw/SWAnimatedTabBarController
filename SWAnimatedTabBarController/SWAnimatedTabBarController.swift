@@ -76,7 +76,7 @@ class SWAnimatedTabBarController: UITabBarController {
         containerView = UIView()
         containerView.userInteractionEnabled = false
         containerView.backgroundColor = self.tabBar.backgroundColor
-        containerView.backgroundColor = UIColor.whiteColor()
+        containerView.backgroundColor = UIColor.redColor()
         containerView.frame = self.tabBar.bounds
         self.tabBar.addSubview(containerView)
         
