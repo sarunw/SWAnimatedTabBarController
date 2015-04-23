@@ -103,11 +103,30 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Badge" image="second" badgeValue="3" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Badge" image="second" badgeValue="3" id="cPa-gy-q4n" customClass="SWAnimatedTabBarItem" customModule="SWAnimatedTabBarController" customModuleProvider="target"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qUC-XS-9Sx">
+            <objects>
+                <viewController id="mnO-j4-vQ8" customClass="ThirdViewController" customModule="SWAnimatedTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ly-Fv-USK"/>
+                        <viewControllerLayoutGuide type="bottom" id="g4R-o0-msf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HsJ-0b-i1P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="mxF-DR-mI5" customClass="SWAnimatedTabBarItem" customModule="SWAnimatedTabBarController" customModuleProvider="target"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmt-Pl-lSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1040"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -122,6 +141,7 @@
                     <connections>
                         <segue destination="JCa-tN-OWZ" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="mnO-j4-vQ8" kind="relationship" relationship="viewControllers" id="iDE-3a-KnG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

@@ -11,6 +11,7 @@ import UIKit
 struct IconView {
     var icon: UIImageView
     var textLabel: UILabel
+    var badgeView: UIView
 }
 
 class SWAnimatedTabBarController: UITabBarController {
@@ -26,6 +27,7 @@ class SWAnimatedTabBarController: UITabBarController {
         super.viewDidLoad()
         self.createContainerView()
         self.createTabBarItems()
+        self.setTabBarItemDelegate()
         self.delegate = self
         
         setIconViewAtIndex(0, selected: true)
@@ -58,6 +60,16 @@ class SWAnimatedTabBarController: UITabBarController {
 //                }
 //            }
 //        }
+    }
+    
+    func setTabBarItemDelegate() {
+        if let items = tabBar.items as? [UITabBarItem] {
+            for item in items {
+                if let customItem = item as? SWAnimatedTabBarItem {
+                    customItem.delegate = self
+                }
+            }
+        }
     }
     
     func createContainerView() {
@@ -106,8 +118,7 @@ class SWAnimatedTabBarController: UITabBarController {
     
     
     func createTabBarItems() {
-        if let itemCount = tabBar.items?.count,
-           let items = tabBar.items as? [UITabBarItem]
+        if let items = tabBar.items as? [UITabBarItem]
         {
             for (index, tabBarItem) in enumerate(items) {
                 let container = tabBarItemContainerViews[index]
@@ -125,14 +136,24 @@ class SWAnimatedTabBarController: UITabBarController {
                 textLabel.textColor = deselectedColor
                 textLabel.font = UIFont.systemFontOfSize(10)
                 textLabel.textAlignment = .Center
+                
+                let badgeView = UIView()
+                badgeView.layer.cornerRadius = 4
+                badgeView.layer.masksToBounds = true
+                badgeView.backgroundColor = selectedColor
+                badgeView.userInteractionEnabled = false
+                badgeView.setTranslatesAutoresizingMaskIntoConstraints(false)
+                badgeView.hidden = (tabBarItem.badgeValue == nil) ? true : false
         
+                container.addSubview(badgeView)
                 container.addSubview(iconImageView)
                 container.addSubview(textLabel)
                 
+                createBadgeConstraints(badgeView, parent: container, centerXOffset: 18, yOffset: 11)
                 createConstraints(iconImageView, parent: container, yOffset: 18)
                 createConstraints(textLabel, parent: container, yOffset: 41)
                 
-                let iconView = IconView(icon: iconImageView, textLabel: textLabel)
+                let iconView = IconView(icon: iconImageView, textLabel: textLabel, badgeView: badgeView)
                 iconViews.append(iconView)
             }
         }
@@ -143,6 +164,15 @@ class SWAnimatedTabBarController: UITabBarController {
         let vConstraint = NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: parent, attribute: .Top, multiplier: 1, constant: yOffset)
         parent.addConstraint(hConstraint)
         parent.addConstraint(vConstraint)
+    }
+    
+    func createBadgeConstraints(view: UIView, parent: UIView, centerXOffset: CGFloat, yOffset: CGFloat) {
+        let hConstraint = NSLayoutConstraint(item: view, attribute: .CenterX, relatedBy: .Equal, toItem: parent, attribute: .CenterX, multiplier: 1, constant: centerXOffset)
+        let vConstraint = NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: parent, attribute: .Top, multiplier: 1, constant: yOffset)
+        let widthConstraint = NSLayoutConstraint(item: view, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 8)
+        let heightConstraint = NSLayoutConstraint(item: view, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 8)
+
+        parent.addConstraints([widthConstraint, heightConstraint, hConstraint, vConstraint])
     }
     
     func setIconViewAtIndex(index: Int, selected: Bool) {
@@ -186,6 +216,28 @@ extension SWAnimatedTabBarController: UITabBarControllerDelegate {
             }
         }
     }
-    
-    
+}
+
+extension SWAnimatedTabBarController: SWAnimatedTabBarItemDelegate {
+    func tabBarItem(item: SWAnimatedTabBarItem, didSetBadgeValue badgeValue: String?) {
+        if let items = self.tabBar.items as? AnyObject as? NSArray {
+            let index = items.indexOfObject(item)
+            if index != NSNotFound {
+                let iconView = iconViews[index]
+                if badgeValue == nil {
+                    UIView.animateWithDuration(0.3, animations: { () -> Void in
+                        iconView.badgeView.alpha = 0
+                    }, completion: { (finished) -> Void in
+                        iconView.badgeView.hidden = true
+                    })
+                } else {
+                    iconView.badgeView.alpha = 0
+                    iconView.badgeView.hidden = false
+                    UIView.animateWithDuration(0.3, animations: { () -> Void in
+                        iconView.badgeView.alpha = 1
+                        }, completion: nil)
+                }
+            }
+        }
+    }
 }

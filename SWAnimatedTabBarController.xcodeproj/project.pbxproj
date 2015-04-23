@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00DAB4B1AE97311009AFAA3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00DAB4A1AE97311009AFAA3 /* ThirdViewController.swift */; };
 		A03BAA4E1AE90070002E5110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA4D1AE90070002E5110 /* AppDelegate.swift */; };
 		A03BAA501AE90070002E5110 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA4F1AE90070002E5110 /* FirstViewController.swift */; };
 		A03BAA521AE90070002E5110 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA511AE90070002E5110 /* SecondViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A00DAB4A1AE97311009AFAA3 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		A03BAA481AE90070002E5110 /* SWAnimatedTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAnimatedTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BAA4C1AE90070002E5110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03BAA4D1AE90070002E5110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				A03BAA4D1AE90070002E5110 /* AppDelegate.swift */,
 				A03BAA4F1AE90070002E5110 /* FirstViewController.swift */,
 				A03BAA511AE90070002E5110 /* SecondViewController.swift */,
+				A00DAB4A1AE97311009AFAA3 /* ThirdViewController.swift */,
 				A03BAA531AE90070002E5110 /* Main.storyboard */,
 				A03BAA561AE90070002E5110 /* Images.xcassets */,
 				A03BAA581AE90070002E5110 /* LaunchScreen.xib */,
@@ -225,6 +228,7 @@
 				A03BAA701AE90082002E5110 /* SWAnimatedTabBarController.swift in Sources */,
 				A0DE8B3F1AE958BE0098B825 /* SWAnimatedTabBarItem.swift in Sources */,
 				A03BAA4E1AE90070002E5110 /* AppDelegate.swift in Sources */,
+				A00DAB4B1AE97311009AFAA3 /* ThirdViewController.swift in Sources */,
 				A03BAA501AE90070002E5110 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

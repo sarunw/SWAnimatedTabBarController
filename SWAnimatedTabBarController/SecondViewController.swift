@@ -13,7 +13,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.tabBarItem.badgeValue = "ssss"
+        self.tabBarItem.badgeValue = nil
     }
 
     override func didReceiveMemoryWarning() {
