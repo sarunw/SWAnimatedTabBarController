@@ -1,0 +1,6 @@
+framework module SWAnimatedTabBarController {
+  umbrella header "Pods-SWAnimatedTabBarController-umbrella.h"
+
+  export *
+  module * { export * }
+}

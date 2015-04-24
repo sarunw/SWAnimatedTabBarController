@@ -112,27 +112,27 @@ class SWAnimatedTabBarItem: UITabBarItem {
 //    }
 }
 
-public extension UITabBarItem {
-    public func setAnimatedBadgeHidden(hidden: Bool) {
+extension UITabBarItem {
+    func setAnimatedBadgeHidden(hidden: Bool) {
         if let customItem = self as? SWAnimatedTabBarItem {
             customItem.badgeEnabled = !hidden
         }
     }
     
-    public func setAnimatedTitle(title: String?) {
+    func setAnimatedTitle(title: String?) {
         if let customItem = self as? SWAnimatedTabBarItem {
             customItem.sw_title = title
         }
     }
     
-    public func setAnimatedImage(image: UIImage?) {
+    func setAnimatedImage(image: UIImage?) {
         if let customItem = self as? SWAnimatedTabBarItem {
             let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
             customItem.sw_image = templateImage
         }
     }
     
-    public func setAnimated(image: UIImage?, title: String?) {
+    func setAnimated(image: UIImage?, title: String?) {
         
     }
 }

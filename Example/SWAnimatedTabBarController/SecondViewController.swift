@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SWAnimatedTabBarController
 
 class SecondViewController: UIViewController {
 

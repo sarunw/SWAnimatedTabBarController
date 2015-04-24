@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02D818AB7D777D24C44989B2 /* SWAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B2D41B35B6B19B3D5CFBB /* SWAnimator.swift */; };
+		17FBE1867146A10BAD6E860F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38377A27CD6B4F82BB312DDD /* Foundation.framework */; };
+		69776F2F4E509D4035AC944A /* Pods-SWAnimatedTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD39408A2B053784A9E362D /* Pods-SWAnimatedTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72C598D26056B4484F9B708B /* SWPopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F09274B4EA4BDB2C66E4BD /* SWPopAnimation.swift */; };
+		88A50BBBC9D6543C3495ACB1 /* SWAnimatedTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9D5C3A6E79ACB30FDD7454 /* SWAnimatedTabBarItem.swift */; };
+		A70C6400422BBAF0FE74CCB6 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D97CC5710AF4283F08AB5F /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8F8407A1EBEB73038410F92 /* Pods-SWAnimatedTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9E52235B61D5F09DA8754F /* Pods-SWAnimatedTabBarController-dummy.m */; };
+		BD135EF6569D326A3A7597F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38377A27CD6B4F82BB312DDD /* Foundation.framework */; };
+		BE548945ADBBE76B7246EEB3 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9C3EDCE7F10937B41582B3 /* Pods-dummy.m */; };
+		F3698AAE6EC2AA238E024AFD /* SWAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C42238EBC1EDC2639161D /* SWAnimatedTabBarController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8EE5F3822313B2240ABB0DF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 247DB8E54EFE730C00E6A9CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A41EA1FF2F76345DB7085C66;
+			remoteInfo = "Pods-SWAnimatedTabBarController";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F9D5C3A6E79ACB30FDD7454 /* SWAnimatedTabBarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarItem.swift; sourceTree = "<group>"; };
+		1757E4473EA084CF7D9540CC /* Pods-SWAnimatedTabBarController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWAnimatedTabBarController-Private.xcconfig"; sourceTree = "<group>"; };
+		1DA2C219FE37B09DC6A87D36 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		1F9B2D41B35B6B19B3D5CFBB /* SWAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SWAnimator.swift; sourceTree = "<group>"; };
+		21CD7215590056DE5ECBD0F9 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		25C3ABFC1EB238C5F6AF0DCF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38377A27CD6B4F82BB312DDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4EE0A661BF7D7231B7675BFB /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7781C89B003D92C91F9D3483 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		7C9C3EDCE7F10937B41582B3 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		8E1A9DD9FE47F56B7DFFEBCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CD39408A2B053784A9E362D /* Pods-SWAnimatedTabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWAnimatedTabBarController-umbrella.h"; sourceTree = "<group>"; };
+		9D9C42238EBC1EDC2639161D /* SWAnimatedTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		A03FC5766F72B099B8EC08BB /* Pods-SWAnimatedTabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SWAnimatedTabBarController.modulemap"; sourceTree = "<group>"; };
+		A5DACC0325C78C3543DCD1FE /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		ADFA4AD4296C444B42338507 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		B3D97CC5710AF4283F08AB5F /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		B619B60430FBC6F030A1BE43 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		C5E4C2171DDABDFB01DC7226 /* Pods-SWAnimatedTabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWAnimatedTabBarController.xcconfig"; sourceTree = "<group>"; };
+		CEABFE5D16F2E2F5C9C18B70 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		D2585F6D79E11FE4D2D202CA /* SWAnimatedTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWAnimatedTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D548CA28B6F06C3FB841CD88 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D97CEAB273623302F3363F4A /* Pods-SWAnimatedTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWAnimatedTabBarController-prefix.pch"; sourceTree = "<group>"; };
+		EC9E52235B61D5F09DA8754F /* Pods-SWAnimatedTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWAnimatedTabBarController-dummy.m"; sourceTree = "<group>"; };
+		F3F09274B4EA4BDB2C66E4BD /* SWPopAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SWPopAnimation.swift; sourceTree = "<group>"; };
+		F929A5D122820FFF828B40A7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C4314B7F0CE1CE722BC0544 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17FBE1867146A10BAD6E860F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62E27949D8F81E4092DC7D11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD135EF6569D326A3A7597F5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20989D3782EA65D69A632327 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				1F9B2D41B35B6B19B3D5CFBB /* SWAnimator.swift */,
+				F3F09274B4EA4BDB2C66E4BD /* SWPopAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		2B2C9BB43EEE981815D74C61 = {
+			isa = PBXGroup;
+			children = (
+				F929A5D122820FFF828B40A7 /* Podfile */,
+				AFED49158D2B19FF374032CE /* Development Pods */,
+				9F62C7DDBA4C42F297C64354 /* Frameworks */,
+				D5131B72BFB7B6A7F301DA47 /* Products */,
+				7CE5FED8AD16D54AC661C919 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		4FFBAC56E80EF96A4AB5BD15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E1A9DD9FE47F56B7DFFEBCB /* Info.plist */,
+				21CD7215590056DE5ECBD0F9 /* Pods.modulemap */,
+				4EE0A661BF7D7231B7675BFB /* Pods-acknowledgements.markdown */,
+				B619B60430FBC6F030A1BE43 /* Pods-acknowledgements.plist */,
+				7C9C3EDCE7F10937B41582B3 /* Pods-dummy.m */,
+				A5DACC0325C78C3543DCD1FE /* Pods-environment.h */,
+				ADFA4AD4296C444B42338507 /* Pods-frameworks.sh */,
+				1DA2C219FE37B09DC6A87D36 /* Pods-resources.sh */,
+				B3D97CC5710AF4283F08AB5F /* Pods-umbrella.h */,
+				7781C89B003D92C91F9D3483 /* Pods.debug.xcconfig */,
+				CEABFE5D16F2E2F5C9C18B70 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		55FC27C53CEADB8B0FB5E732 /* SWAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				FDFD52F87B53D7483BFD2D0C /* SWAnimatedTabBarController */,
+				DCA3F080A507C323BF646B7D /* Support Files */,
+			);
+			name = SWAnimatedTabBarController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7CE5FED8AD16D54AC661C919 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FFBAC56E80EF96A4AB5BD15 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9F62C7DDBA4C42F297C64354 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB35D942B0BBA365D810277C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFED49158D2B19FF374032CE /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55FC27C53CEADB8B0FB5E732 /* SWAnimatedTabBarController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D5131B72BFB7B6A7F301DA47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25C3ABFC1EB238C5F6AF0DCF /* Pods.framework */,
+				D2585F6D79E11FE4D2D202CA /* SWAnimatedTabBarController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCA3F080A507C323BF646B7D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D548CA28B6F06C3FB841CD88 /* Info.plist */,
+				A03FC5766F72B099B8EC08BB /* Pods-SWAnimatedTabBarController.modulemap */,
+				C5E4C2171DDABDFB01DC7226 /* Pods-SWAnimatedTabBarController.xcconfig */,
+				1757E4473EA084CF7D9540CC /* Pods-SWAnimatedTabBarController-Private.xcconfig */,
+				EC9E52235B61D5F09DA8754F /* Pods-SWAnimatedTabBarController-dummy.m */,
+				D97CEAB273623302F3363F4A /* Pods-SWAnimatedTabBarController-prefix.pch */,
+				9CD39408A2B053784A9E362D /* Pods-SWAnimatedTabBarController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-SWAnimatedTabBarController";
+			sourceTree = "<group>";
+		};
+		EB35D942B0BBA365D810277C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				38377A27CD6B4F82BB312DDD /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FDFD52F87B53D7483BFD2D0C /* SWAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				9D9C42238EBC1EDC2639161D /* SWAnimatedTabBarController.swift */,
+				0F9D5C3A6E79ACB30FDD7454 /* SWAnimatedTabBarItem.swift */,
+				20989D3782EA65D69A632327 /* Animations */,
+			);
+			path = SWAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		867E9D182CDE19F6120A6047 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69776F2F4E509D4035AC944A /* Pods-SWAnimatedTabBarController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA2E24C3D05F565FCD1ED4D7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70C6400422BBAF0FE74CCB6 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A41EA1FF2F76345DB7085C66 /* Pods-SWAnimatedTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D71485CB7E14113046BCDD3 /* Build configuration list for PBXNativeTarget "Pods-SWAnimatedTabBarController" */;
+			buildPhases = (
+				7319857EB12EEA66C8894B4B /* Sources */,
+				62E27949D8F81E4092DC7D11 /* Frameworks */,
+				867E9D182CDE19F6120A6047 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SWAnimatedTabBarController";
+			productName = "Pods-SWAnimatedTabBarController";
+			productReference = D2585F6D79E11FE4D2D202CA /* SWAnimatedTabBarController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C8420057943F3294E1B54682 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A36A3926B74FB96BE1B9F4A1 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				830FB7D46207BB60BC41779A /* Sources */,
+				2C4314B7F0CE1CE722BC0544 /* Frameworks */,
+				CA2E24C3D05F565FCD1ED4D7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F05B0EDBC7539F89E9A821D /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 25C3ABFC1EB238C5F6AF0DCF /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		247DB8E54EFE730C00E6A9CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 3FD6B1FAC62C221DD68C3316 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2B2C9BB43EEE981815D74C61;
+			productRefGroup = D5131B72BFB7B6A7F301DA47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8420057943F3294E1B54682 /* Pods */,
+				A41EA1FF2F76345DB7085C66 /* Pods-SWAnimatedTabBarController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7319857EB12EEA66C8894B4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F8407A1EBEB73038410F92 /* Pods-SWAnimatedTabBarController-dummy.m in Sources */,
+				F3698AAE6EC2AA238E024AFD /* SWAnimatedTabBarController.swift in Sources */,
+				88A50BBBC9D6543C3495ACB1 /* SWAnimatedTabBarItem.swift in Sources */,
+				02D818AB7D777D24C44989B2 /* SWAnimator.swift in Sources */,
+				72C598D26056B4484F9B708B /* SWPopAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		830FB7D46207BB60BC41779A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE548945ADBBE76B7246EEB3 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F05B0EDBC7539F89E9A821D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SWAnimatedTabBarController";
+			target = A41EA1FF2F76345DB7085C66 /* Pods-SWAnimatedTabBarController */;
+			targetProxy = 8EE5F3822313B2240ABB0DF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1CC13B6F613D5527CCECBB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1757E4473EA084CF7D9540CC /* Pods-SWAnimatedTabBarController-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SWAnimatedTabBarController/Pods-SWAnimatedTabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-SWAnimatedTabBarController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-SWAnimatedTabBarController/Pods-SWAnimatedTabBarController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SWAnimatedTabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C6D21765E56C73038710388E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6E8518FDBAC1CBE0B272F76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D9920BCF932E143C05079810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEABFE5D16F2E2F5C9C18B70 /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4E82F7F747A19601F3F8D8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7781C89B003D92C91F9D3483 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5E7ED3D26F5C9BD576D8400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1757E4473EA084CF7D9540CC /* Pods-SWAnimatedTabBarController-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SWAnimatedTabBarController/Pods-SWAnimatedTabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-SWAnimatedTabBarController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-SWAnimatedTabBarController/Pods-SWAnimatedTabBarController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SWAnimatedTabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FD6B1FAC62C221DD68C3316 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E8518FDBAC1CBE0B272F76 /* Debug */,
+				C6D21765E56C73038710388E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D71485CB7E14113046BCDD3 /* Build configuration list for PBXNativeTarget "Pods-SWAnimatedTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E7ED3D26F5C9BD576D8400 /* Debug */,
+				1CC13B6F613D5527CCECBB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A36A3926B74FB96BE1B9F4A1 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4E82F7F747A19601F3F8D8B /* Debug */,
+				D9920BCF932E143C05079810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 247DB8E54EFE730C00E6A9CD /* Project object */;
+}

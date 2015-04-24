@@ -1,0 +1,14 @@
+PODS:
+  - SWAnimatedTabBarController (1.0.0)
+
+DEPENDENCIES:
+  - SWAnimatedTabBarController (from `../`)
+
+EXTERNAL SOURCES:
+  SWAnimatedTabBarController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SWAnimatedTabBarController: 7d95db1bd11502746a9ed9c978b3300ccfb530d7
+
+COCOAPODS: 0.36.3
