@@ -12,7 +12,9 @@ import UIKit
     func tabBarItem(item: SWAnimatedTabBarItem, didEnableBadge badgeEnabled: Bool)
     func tabBarItem(item: SWAnimatedTabBarItem, didChangeTitle title: String?)
     func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?)
+    func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?, title: String?)
 }
+
 
 protocol SWAnimatedTabBarItemAnimation {
     
@@ -31,9 +33,48 @@ class SWItemAnimation: NSObject, SWAnimatedTabBarItemAnimation {
     }
 }
 
+// MARK: Animation
+enum SWAnimatedTabBarItemContextTransitioningImageKey {
+    case OldImage
+    case NewImage
+}
+
+enum SWAnimatedTabBarItemContextTransitioningTitleKey {
+    case OldTitle
+    case NewTitle
+}
+
+/**
+*  Context used in animation
+*/
+protocol SWAnimatedTabBarItemContextTransitioning {
+    func imageView() -> UIImageView
+    func textLabel() -> UILabel
+    
+    func imageForKey(key: SWAnimatedTabBarItemContextTransitioningImageKey) -> UIImage?
+    func titleForKey(key: SWAnimatedTabBarItemContextTransitioningTitleKey) -> String?
+
+    /**
+        Notifies the system that the transition animation is done.
+    */
+    func completeTransition()
+}
+
+protocol SWAnimatedTabBarItemAnimatedTransitioning {
+    func animatedTransition(transitionContext: SWAnimatedTabBarItemContextTransitioning)
+}
+
+
+protocol SWAnimatedTabBarItemTransitionDelegate: class {
+    func animationControllerForChangedTabBarItem(
+        tabBarItem: SWAnimatedTabBarItem) -> SWAnimatedTabBarItemAnimatedTransitioning?
+}
+
 class SWAnimatedTabBarItem: UITabBarItem {
     
-    var delegate: SWAnimatedTabBarItemDelegate?
+    weak var delegate: SWAnimatedTabBarItemDelegate?
+    weak var transitionDelegate: SWAnimatedTabBarItemTransitionDelegate?
+    
     @IBOutlet weak var animation: SWItemAnimation?
     
     @IBInspectable var badgeEnabled: Bool = false {
@@ -52,6 +93,11 @@ class SWAnimatedTabBarItem: UITabBarItem {
         didSet {
             self.delegate?.tabBarItem(self, didChangeImage: sw_image)
         }
+    }
+    
+    override func setAnimated(image: UIImage?, title: String?) {
+        let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        self.delegate?.tabBarItem(self, didChangeImage: templateImage, title: title)
     }
     
     // TODO: wait until Apple fix this to use this
@@ -84,6 +130,10 @@ extension UITabBarItem {
             let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
             customItem.sw_image = templateImage
         }
+    }
+    
+    func setAnimated(image: UIImage?, title: String?) {
+        
     }
 }
 

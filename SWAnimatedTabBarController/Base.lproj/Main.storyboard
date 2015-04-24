@@ -128,9 +128,46 @@
                     <view key="view" contentMode="scaleToFill" id="HsJ-0b-i1P">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IX-sy-Kkn">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="mnO-j4-vQ8" eventType="touchUpInside" id="6Kw-VJ-3wY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYt-4J-nD3">
+                                <rect key="frame" x="257" y="343" width="87" height="30"/>
+                                <state key="normal" title="Change Title">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeTitleTapped:" destination="mnO-j4-vQ8" eventType="touchUpInside" id="AzO-QH-0pR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj2-sd-fQe">
+                                <rect key="frame" x="255" y="398" width="90" height="30"/>
+                                <state key="normal" title="Change Both">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeBothTapped:" destination="mnO-j4-vQ8" eventType="touchUpInside" id="451-RK-n8T"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="rYt-4J-nD3" secondAttribute="centerX" id="5LT-Uz-FAL"/>
+                            <constraint firstAttribute="centerX" secondItem="Vj2-sd-fQe" secondAttribute="centerX" id="SEs-Ar-lA9"/>
+                            <constraint firstItem="Vj2-sd-fQe" firstAttribute="top" secondItem="rYt-4J-nD3" secondAttribute="bottom" constant="25" id="W55-JP-LQc"/>
+                            <constraint firstItem="rYt-4J-nD3" firstAttribute="top" secondItem="0IX-sy-Kkn" secondAttribute="bottom" constant="28" id="cgT-km-Qhv"/>
+                            <constraint firstAttribute="centerY" secondItem="0IX-sy-Kkn" secondAttribute="centerY" id="jOq-gK-rkr"/>
+                            <constraint firstAttribute="centerX" secondItem="0IX-sy-Kkn" secondAttribute="centerX" id="oVa-Jc-yOy"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="mxF-DR-mI5" customClass="SWAnimatedTabBarItem" customModule="SWAnimatedTabBarController" customModuleProvider="target"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="second" id="mxF-DR-mI5" customClass="SWAnimatedTabBarItem" customModule="SWAnimatedTabBarController" customModuleProvider="target"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmt-Pl-lSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,7 +191,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-106" y="326"/>
         </scene>
         <!--First-->
         <scene sceneID="tpt-vR-pl7">

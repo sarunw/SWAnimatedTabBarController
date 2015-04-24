@@ -23,6 +23,10 @@ class SWAnimatedTabBarController: UITabBarController {
         return tabBar.tintColor
     }
     
+    var animatedTabBarItemIndex: Int!
+    var newImage: UIImage?
+    var newTitle: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createContainerView()
@@ -67,6 +71,7 @@ class SWAnimatedTabBarController: UITabBarController {
             for item in items {
                 if let customItem = item as? SWAnimatedTabBarItem {
                     customItem.delegate = self
+                    customItem.transitionDelegate = self
                 }
             }
         }
@@ -209,7 +214,8 @@ class SWAnimatedTabBarController: UITabBarController {
     }
 
     func indexFromTabBarItem(item: UITabBarItem) -> Int? {
-        if let items = self.tabBar.items as? AnyObject as? NSArray {
+        if let items = self.tabBar.items as? AnyObject as? NSArray
+        {
             let index = items.indexOfObject(item)
             return (index == NSNotFound) ? nil : index
         }
@@ -237,18 +243,98 @@ extension SWAnimatedTabBarController: UITabBarControllerDelegate {
     }
 }
 
+extension SWAnimatedTabBarController: SWAnimatedTabBarItemContextTransitioning {
+    func imageView() -> UIImageView {
+        let iconView = iconViews[animatedTabBarItemIndex]
+        return iconView.icon
+    }
+    
+    func textLabel() -> UILabel {
+        let iconView = iconViews[animatedTabBarItemIndex]
+        return iconView.textLabel
+    }
+    
+    func imageForKey(key: SWAnimatedTabBarItemContextTransitioningImageKey) -> UIImage? {
+        let iconView = iconViews[animatedTabBarItemIndex]
+
+        switch key {
+        case .OldImage: return iconView.icon.image
+        case .NewImage: return self.newImage
+        }
+    }
+    
+    func titleForKey(key: SWAnimatedTabBarItemContextTransitioningTitleKey) -> String? {
+        let iconView = iconViews[animatedTabBarItemIndex]
+        
+        switch key {
+        case .OldTitle: return iconView.textLabel.text
+        case .NewTitle: return self.newTitle
+        }
+    }
+    
+    /**
+    Notifies the system that the transition animation is done.
+    */
+    func completeTransition() {
+        let iconView = iconViews[animatedTabBarItemIndex]
+        if let newImage = newImage {
+            iconView.icon.image = newImage
+        }
+        
+        if let newTitle = newTitle {
+            iconView.textLabel.text = newTitle
+        }
+        
+        newImage = nil
+        newTitle = nil
+    }
+}
+
 extension SWAnimatedTabBarController: SWAnimatedTabBarItemDelegate {
+    func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?, title: String?) {
+        if let index = indexFromTabBarItem(item) {
+            let iconView = iconViews[index]
+            
+            if let transitionDelegate = item.transitionDelegate {
+                let context = self
+                self.newImage = image
+                self.newTitle = title
+                transitionDelegate.animationControllerForChangedTabBarItem(item)?.animatedTransition(context)
+            } else {
+                // No animation just set it
+                iconView.textLabel.text = title
+                iconView.icon.image = image
+            }
+        }
+    }
+    
     func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?) {
         if let index = indexFromTabBarItem(item) {
             let iconView = iconViews[index]
-            iconView.icon.image = image
+            
+            if let transitionDelegate = item.transitionDelegate {
+                let context = self
+                self.newImage = image
+                transitionDelegate.animationControllerForChangedTabBarItem(item)?.animatedTransition(context)
+            } else {
+                // No animation just set it
+                iconView.icon.image = image
+            }
         }
     }
     
     func tabBarItem(item: SWAnimatedTabBarItem, didChangeTitle title: String?) {
         if let index = indexFromTabBarItem(item) {
             let iconView = iconViews[index]
-            iconView.textLabel.text = title
+            
+            if let transitionDelegate = item.transitionDelegate {
+                let context = self
+                self.newTitle = title
+                transitionDelegate.animationControllerForChangedTabBarItem(item)?.animatedTransition(context)
+            } else {
+                // No animation just set it
+                iconView.textLabel.text = title
+            }
         }
     }
     
@@ -268,6 +354,19 @@ extension SWAnimatedTabBarController: SWAnimatedTabBarItemDelegate {
                         iconView.badgeView.hidden = true
                 })
             }
+        }
+    }
+}
+
+
+extension SWAnimatedTabBarController: SWAnimatedTabBarItemTransitionDelegate {
+    func animationControllerForChangedTabBarItem(tabBarItem: SWAnimatedTabBarItem) -> SWAnimatedTabBarItemAnimatedTransitioning? {
+        if let index = indexFromTabBarItem(tabBarItem) {
+            // This make we can use ! instead of ?
+            animatedTabBarItemIndex = index
+            return SWAnimator()
+        } else {
+            return nil
         }
     }
 }

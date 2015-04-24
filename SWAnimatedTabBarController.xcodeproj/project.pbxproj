@@ -17,6 +17,7 @@
 		A03BAA661AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA651AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift */; };
 		A03BAA701AE90082002E5110 /* SWAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA6F1AE90082002E5110 /* SWAnimatedTabBarController.swift */; };
 		A03BAA731AE9FC32002E5110 /* SWPopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA721AE9FC32002E5110 /* SWPopAnimation.swift */; };
+		A03BAAA81AEA3005002E5110 /* SWAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAAA71AEA3005002E5110 /* SWAnimator.swift */; };
 		A0DE8B3F1AE958BE0098B825 /* SWAnimatedTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DE8B3E1AE958BE0098B825 /* SWAnimatedTabBarItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		A03BAA651AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarControllerTests.swift; sourceTree = "<group>"; };
 		A03BAA6F1AE90082002E5110 /* SWAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarController.swift; sourceTree = "<group>"; };
 		A03BAA721AE9FC32002E5110 /* SWPopAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPopAnimation.swift; sourceTree = "<group>"; };
+		A03BAAA71AEA3005002E5110 /* SWAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAnimator.swift; sourceTree = "<group>"; };
 		A0DE8B3E1AE958BE0098B825 /* SWAnimatedTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A03BAA721AE9FC32002E5110 /* SWPopAnimation.swift */,
+				A03BAAA71AEA3005002E5110 /* SWAnimator.swift */,
 			);
 			name = Animations;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03BAAA81AEA3005002E5110 /* SWAnimator.swift in Sources */,
 				A03BAA521AE90070002E5110 /* SecondViewController.swift in Sources */,
 				A03BAA701AE90082002E5110 /* SWAnimatedTabBarController.swift in Sources */,
 				A0DE8B3F1AE958BE0098B825 /* SWAnimatedTabBarItem.swift in Sources */,

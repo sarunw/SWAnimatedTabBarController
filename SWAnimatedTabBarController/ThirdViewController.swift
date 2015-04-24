@@ -17,7 +17,6 @@ class ThirdViewController: UIViewController {
         
         self.tabBarItem.setAnimatedBadgeHidden(false)
         self.tabBarItem.setAnimatedTitle("New Third")
-        self.tabBarItem.setAnimatedImage(UIImage(named: "first"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +25,20 @@ class ThirdViewController: UIViewController {
     }
     
 
+    @IBAction func buttonTapped(sender: AnyObject) {
+        let image = UIImage(named: "first")
+        
+        self.tabBarItem.setAnimatedImage(image)
+    }
+    
+    @IBAction func changeBothTapped(sender: AnyObject) {
+        let image = UIImage(named: "first")
+        
+        self.tabBarItem.setAnimated(image, title: "Change Third")
+    }
+    @IBAction func changeTitleTapped(sender: AnyObject) {
+        self.tabBarItem.setAnimatedTitle("Only Third")
+    }
     /*
     // MARK: - Navigation
 
