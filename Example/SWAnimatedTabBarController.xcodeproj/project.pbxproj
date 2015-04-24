@@ -16,7 +16,6 @@
 		A03BAA5A1AE90070002E5110 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03BAA581AE90070002E5110 /* LaunchScreen.xib */; };
 		A03BAA661AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA651AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift */; };
 		A091C91C1AEA594800BD080B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A091C9191AEA594800BD080B /* LICENSE */; };
-		A091C91D1AEA594800BD080B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A091C91A1AEA594800BD080B /* README.md */; };
 		A091C91E1AEA594800BD080B /* SWAnimatedTabBarController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A091C91B1AEA594800BD080B /* SWAnimatedTabBarController.podspec */; };
 		FDDC37C7BBE120D60F1CF3E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552F105A380890100B3D2E9B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -314,7 +313,6 @@
 			files = (
 				A03BAA521AE90070002E5110 /* SecondViewController.swift in Sources */,
 				A03BAA4E1AE90070002E5110 /* AppDelegate.swift in Sources */,
-				A091C91D1AEA594800BD080B /* README.md in Sources */,
 				A00DAB4B1AE97311009AFAA3 /* ThirdViewController.swift in Sources */,
 				A03BAA501AE90070002E5110 /* FirstViewController.swift in Sources */,
 			);
