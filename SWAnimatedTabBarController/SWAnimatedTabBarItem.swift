@@ -14,9 +14,27 @@ import UIKit
     func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?)
 }
 
+protocol SWAnimatedTabBarItemAnimation {
+    
+    func playAnimation(iconView: IconView)
+    func selectedState(iconView: IconView)
+}
+
+class SWItemAnimation: NSObject, SWAnimatedTabBarItemAnimation {
+    
+    func playAnimation(iconView: IconView) {
+        
+    }
+    
+    func selectedState(iconView: IconView) {
+        
+    }
+}
+
 class SWAnimatedTabBarItem: UITabBarItem {
     
     var delegate: SWAnimatedTabBarItemDelegate?
+    @IBOutlet weak var animation: SWItemAnimation?
     
     @IBInspectable var badgeEnabled: Bool = false {
         didSet {
@@ -68,3 +86,5 @@ extension UITabBarItem {
         }
     }
 }
+
+

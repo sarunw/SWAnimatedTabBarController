@@ -107,9 +107,13 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="badgeEnabled" value="YES"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="Oeh-od-S3C" id="at6-no-dJo"/>
+                        </connections>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <customObject id="Oeh-od-S3C" customClass="SWPopAnimation" customModule="SWAnimatedTabBarController" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>

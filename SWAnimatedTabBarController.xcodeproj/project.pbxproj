@@ -16,6 +16,7 @@
 		A03BAA5A1AE90070002E5110 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03BAA581AE90070002E5110 /* LaunchScreen.xib */; };
 		A03BAA661AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA651AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift */; };
 		A03BAA701AE90082002E5110 /* SWAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA6F1AE90082002E5110 /* SWAnimatedTabBarController.swift */; };
+		A03BAA731AE9FC32002E5110 /* SWPopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA721AE9FC32002E5110 /* SWPopAnimation.swift */; };
 		A0DE8B3F1AE958BE0098B825 /* SWAnimatedTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DE8B3E1AE958BE0098B825 /* SWAnimatedTabBarItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		A03BAA641AE90071002E5110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03BAA651AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarControllerTests.swift; sourceTree = "<group>"; };
 		A03BAA6F1AE90082002E5110 /* SWAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		A03BAA721AE9FC32002E5110 /* SWPopAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPopAnimation.swift; sourceTree = "<group>"; };
 		A0DE8B3E1AE958BE0098B825 /* SWAnimatedTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 		A03BAA4A1AE90070002E5110 /* SWAnimatedTabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				A03BAA711AE9FAE8002E5110 /* Animations */,
 				A03BAA4D1AE90070002E5110 /* AppDelegate.swift */,
 				A03BAA4F1AE90070002E5110 /* FirstViewController.swift */,
 				A03BAA511AE90070002E5110 /* SecondViewController.swift */,
@@ -122,6 +125,14 @@
 				A03BAA641AE90071002E5110 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A03BAA711AE9FAE8002E5110 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				A03BAA721AE9FC32002E5110 /* SWPopAnimation.swift */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 				A03BAA4E1AE90070002E5110 /* AppDelegate.swift in Sources */,
 				A00DAB4B1AE97311009AFAA3 /* ThirdViewController.swift in Sources */,
 				A03BAA501AE90070002E5110 /* FirstViewController.swift in Sources */,
+				A03BAA731AE9FC32002E5110 /* SWPopAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

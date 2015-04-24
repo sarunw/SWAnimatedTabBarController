@@ -226,6 +226,12 @@ extension SWAnimatedTabBarController: UITabBarControllerDelegate {
             if index != NSNotFound {
                 let iconView = iconViews[index]
                 setIconView(iconView, selected: true)
+                
+                if let customItem = viewController.tabBarItem as? SWAnimatedTabBarItem,
+                   let animation = customItem.animation
+                {
+                    animation.selectedState(iconView)
+                }
             }
         }
     }
