@@ -15,8 +15,8 @@ class ThirdViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        self.tabBarItem.badgeValue = "third ja"
-        self.tabBarItem.title = "New Third"
+        self.tabBarItem.setAnimatedBadgeHidden(false)
+        self.tabBarItem.setAnimatedTitle("New Third")
     }
 
     override func didReceiveMemoryWarning() {

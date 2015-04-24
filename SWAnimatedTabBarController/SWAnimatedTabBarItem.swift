@@ -9,24 +9,35 @@
 import UIKit
 
 @objc protocol SWAnimatedTabBarItemDelegate {
-    func tabBarItem(item: SWAnimatedTabBarItem, didSetBadgeValue badgeValue: String?)
+    func tabBarItem(item: SWAnimatedTabBarItem, didEnableBadge badgeEnabled: Bool)
+    func tabBarItem(item: SWAnimatedTabBarItem, didChangeTitle title: String?)
+    func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?)
 }
 
 class SWAnimatedTabBarItem: UITabBarItem {
     
     var delegate: SWAnimatedTabBarItemDelegate?
     
-    var _badgeValue: String?
+    @IBInspectable var badgeEnabled: Bool = false {
+        didSet {
+            self.delegate?.tabBarItem(self, didEnableBadge: badgeEnabled)
+        }
+    }
     
-    override var badgeValue: String? {
-        get {
-            return _badgeValue
+    @IBInspectable var sw_title: String? {
+        didSet {
+            self.delegate?.tabBarItem(self, didChangeTitle: sw_title)
         }
-        
-        set {
-            self.delegate?.tabBarItem(self, didSetBadgeValue: newValue)
-            _badgeValue = nil
+    }
+    
+    @IBInspectable var sw_image: UIImage? {
+        didSet {
+            self.delegate?.tabBarItem(self, didChangeImage: sw_image)
         }
+    }
+    
+    // TODO: wait until Apple fix this to use this
+//    override var badgeValue: String? {
 //        didSet {
 //            self.delegate?.tabBarItem(self, didSetBadgeValue: badgeValue)
 //            // HAX: swift bug causing recursive
@@ -34,5 +45,19 @@ class SWAnimatedTabBarItem: UITabBarItem {
 //            // If you assign a value to a property within its own didSet observer, the new value that you assign will replace the one that was just set.
 //            //badgeValue = nil
 //        }
+//    }
+}
+
+extension UITabBarItem {
+    func setAnimatedBadgeHidden(hidden: Bool) {
+        if let customItem = self as? SWAnimatedTabBarItem {
+            customItem.badgeEnabled = !hidden
+        }
+    }
+    
+    func setAnimatedTitle(title: String?) {
+        if let customItem = self as? SWAnimatedTabBarItem {
+            customItem.sw_title = title
+        }
     }
 }

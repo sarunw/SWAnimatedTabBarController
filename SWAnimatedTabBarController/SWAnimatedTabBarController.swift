@@ -76,7 +76,7 @@ class SWAnimatedTabBarController: UITabBarController {
         containerView = UIView()
         containerView.userInteractionEnabled = false
         containerView.backgroundColor = self.tabBar.backgroundColor
-        containerView.backgroundColor = UIColor.redColor()
+        containerView.backgroundColor = UIColor.whiteColor()
         containerView.frame = self.tabBar.bounds
         self.tabBar.addSubview(containerView)
         
@@ -143,7 +143,12 @@ class SWAnimatedTabBarController: UITabBarController {
                 badgeView.backgroundColor = selectedColor
                 badgeView.userInteractionEnabled = false
                 badgeView.setTranslatesAutoresizingMaskIntoConstraints(false)
-                badgeView.hidden = (tabBarItem.badgeValue == nil) ? true : false
+                if let customItem = tabBarItem as? SWAnimatedTabBarItem {
+                    badgeView.hidden = !customItem.badgeEnabled
+                } else {
+                    badgeView.hidden = (tabBarItem.badgeValue == nil) ? true : false
+                }
+
         
                 container.addSubview(badgeView)
                 container.addSubview(iconImageView)
@@ -203,6 +208,14 @@ class SWAnimatedTabBarController: UITabBarController {
         textLabel.textColor = color
     }
 
+    func indexFromTabBarItem(item: UITabBarItem) -> Int? {
+        if let items = self.tabBar.items as? AnyObject as? NSArray {
+            let index = items.indexOfObject(item)
+            return (index == NSNotFound) ? nil : index
+        }
+        
+        return nil
+    }
 }
 
 extension SWAnimatedTabBarController: UITabBarControllerDelegate {
@@ -219,24 +232,35 @@ extension SWAnimatedTabBarController: UITabBarControllerDelegate {
 }
 
 extension SWAnimatedTabBarController: SWAnimatedTabBarItemDelegate {
-    func tabBarItem(item: SWAnimatedTabBarItem, didSetBadgeValue badgeValue: String?) {
-        if let items = self.tabBar.items as? AnyObject as? NSArray {
-            let index = items.indexOfObject(item)
-            if index != NSNotFound {
-                let iconView = iconViews[index]
-                if badgeValue == nil {
-                    UIView.animateWithDuration(0.3, animations: { () -> Void in
-                        iconView.badgeView.alpha = 0
+    func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?) {
+        if let index = indexFromTabBarItem(item) {
+            let iconView = iconViews[index]
+            iconView.icon.image = image
+        }
+    }
+    
+    func tabBarItem(item: SWAnimatedTabBarItem, didChangeTitle title: String?) {
+        if let index = indexFromTabBarItem(item) {
+            let iconView = iconViews[index]
+            iconView.textLabel.text = title
+        }
+    }
+    
+    func tabBarItem(item: SWAnimatedTabBarItem, didEnableBadge badgeEnabled: Bool) {
+        if let index = indexFromTabBarItem(item) {
+            let iconView = iconViews[index]
+            if badgeEnabled {
+                iconView.badgeView.alpha = 0
+                iconView.badgeView.hidden = false
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    iconView.badgeView.alpha = 1
+                    }, completion: nil)
+            } else {
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    iconView.badgeView.alpha = 0
                     }, completion: { (finished) -> Void in
                         iconView.badgeView.hidden = true
-                    })
-                } else {
-                    iconView.badgeView.alpha = 0
-                    iconView.badgeView.hidden = false
-                    UIView.animateWithDuration(0.3, animations: { () -> Void in
-                        iconView.badgeView.alpha = 1
-                        }, completion: nil)
-                }
+                })
             }
         }
     }
