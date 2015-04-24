@@ -60,4 +60,11 @@ extension UITabBarItem {
             customItem.sw_title = title
         }
     }
+    
+    func setAnimatedImage(image: UIImage?) {
+        if let customItem = self as? SWAnimatedTabBarItem {
+            let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+            customItem.sw_image = templateImage
+        }
+    }
 }
