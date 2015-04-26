@@ -17,7 +17,6 @@
 		C0E28A56B1B27EF44DE9D93A /* Pods-SWAnimatedTabBarControllerExample-SWAnimatedTabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98BD2DF1E839F8EA20679D59 /* Pods-SWAnimatedTabBarControllerExample-SWAnimatedTabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC7934FFC3924DBEE5539112 /* Pods-SWAnimatedTabBarControllerExample-SWAnimatedTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 979162DC4B97E3CB50BD5E4B /* Pods-SWAnimatedTabBarControllerExample-SWAnimatedTabBarController-dummy.m */; };
 		E6529B509CE4C1C4AA068873 /* SWAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B1956A1EED873BB75116B /* SWAnimatedTabBarController.swift */; };
-		E9B38AB5592EA5E330054086 /* UIView+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBC171E36648A7F86CDA8F /* UIView+Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +46,6 @@
 		781B1956A1EED873BB75116B /* SWAnimatedTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarController.swift; sourceTree = "<group>"; };
 		81B3FE226282199233E63A2B /* SWAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SWAnimator.swift; sourceTree = "<group>"; };
 		89E2F695599AA803DAC9FE6C /* Pods-SWAnimatedTabBarControllerExample-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWAnimatedTabBarControllerExample-environment.h"; sourceTree = "<group>"; };
-		8DCBC171E36648A7F86CDA8F /* UIView+Test.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Test.swift"; sourceTree = "<group>"; };
 		958DAFA6474E24F241318E43 /* Pods-SWAnimatedTabBarControllerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWAnimatedTabBarControllerExample.debug.xcconfig"; sourceTree = "<group>"; };
 		979162DC4B97E3CB50BD5E4B /* Pods-SWAnimatedTabBarControllerExample-SWAnimatedTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWAnimatedTabBarControllerExample-SWAnimatedTabBarController-dummy.m"; sourceTree = "<group>"; };
 		98BD2DF1E839F8EA20679D59 /* Pods-SWAnimatedTabBarControllerExample-SWAnimatedTabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWAnimatedTabBarControllerExample-SWAnimatedTabBarController-umbrella.h"; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			children = (
 				781B1956A1EED873BB75116B /* SWAnimatedTabBarController.swift */,
 				EFAD76BAF6698E010F95A655 /* SWAnimatedTabBarItem.swift */,
-				8DCBC171E36648A7F86CDA8F /* UIView+Test.swift */,
 				3F028722964AA85154FB12D6 /* Animations */,
 			);
 			path = SWAnimatedTabBarController;
@@ -297,7 +294,6 @@
 				B7F56148AE5CE1F8ED0E0CE3 /* SWAnimatedTabBarItem.swift in Sources */,
 				27321B7510CEB62851EA715B /* SWAnimator.swift in Sources */,
 				99DEFC6B208FD4F4FBA59272 /* SWPopAnimation.swift in Sources */,
-				E9B38AB5592EA5E330054086 /* UIView+Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
