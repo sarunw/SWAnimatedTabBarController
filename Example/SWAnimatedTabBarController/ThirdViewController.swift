@@ -14,8 +14,8 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.tabBarItem.setAnimatedBadgeHidden(false)
-        self.tabBarItem.setAnimatedTitle("New Third")
+        self.sw_animatedTabBarItem?.setAnimatedBadgeHidden(false)
+        self.sw_animatedTabBarItem?.setAnimatedTitle("New Third")
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,16 +27,16 @@ class ThirdViewController: UIViewController {
     @IBAction func buttonTapped(sender: AnyObject) {
         let image = UIImage(named: "first")
         
-        self.tabBarItem.setAnimatedImage(image)
+        self.sw_animatedTabBarItem?.setAnimatedImage(image)
     }
     
     @IBAction func changeBothTapped(sender: AnyObject) {
         let image = UIImage(named: "first")
         
-        self.tabBarItem.setAnimated(image, title: "Change Third")
+        self.sw_animatedTabBarItem?.setAnimated(image, title: "Change Third")
     }
     @IBAction func changeTitleTapped(sender: AnyObject) {
-        self.tabBarItem.setAnimatedTitle("Only Third")
+        self.sw_animatedTabBarItem?.setAnimatedTitle("Only Third")
     }
     /*
     // MARK: - Navigation

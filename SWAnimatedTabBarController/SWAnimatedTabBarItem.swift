@@ -95,20 +95,20 @@ public class SWAnimatedTabBarItem: UITabBarItem {
         }
     }
     
-    public override func setAnimated(image: UIImage?, title: String?) {
+    public func setAnimated(image: UIImage?, title: String?) {
         let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         self.delegate?.tabBarItem(self, didChangeImage: templateImage, title: title)
     }
     
-    public override func setAnimatedBadgeHidden(hidden: Bool) {
+    public func setAnimatedBadgeHidden(hidden: Bool) {
         self.badgeEnabled = !hidden
     }
     
-    public override func setAnimatedTitle(title: String?) {
+    public func setAnimatedTitle(title: String?) {
         self.sw_title = title
     }
     
-    public override func setAnimatedImage(image: UIImage?) {
+    public func setAnimatedImage(image: UIImage?) {
         let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         self.sw_image = templateImage
     }
@@ -125,17 +125,14 @@ public class SWAnimatedTabBarItem: UITabBarItem {
 //    }
 }
 
-public extension UITabBarItem {
-    public func setAnimatedBadgeHidden(hidden: Bool) {
-    }
-    
-    public func setAnimatedTitle(title: String?) {
-    }
-    
-    public func setAnimatedImage(image: UIImage?) {
-    }
-    
-    public func setAnimated(image: UIImage?, title: String?) {        
+public extension UIViewController {
+    public var sw_animatedTabBarItem: SWAnimatedTabBarItem? {
+        if self.tabBarItem is SWAnimatedTabBarItem {
+            return (self.tabBarItem as! SWAnimatedTabBarItem)
+        } else {
+            return nil
+        }
+        
     }
 }
 

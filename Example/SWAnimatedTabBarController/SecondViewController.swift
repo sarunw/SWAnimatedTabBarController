@@ -14,7 +14,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.tabBarItem.setAnimatedBadgeHidden(true)
+        self.sw_animatedTabBarItem?.setAnimatedBadgeHidden(true)
     }
 
     override func didReceiveMemoryWarning() {
