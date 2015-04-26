@@ -13,6 +13,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController?.sw_animatedTabBarItem?.setAnimatedTitle("What wrong")
     }
 
     override func didReceiveMemoryWarning() {

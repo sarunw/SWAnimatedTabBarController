@@ -127,12 +127,11 @@ public class SWAnimatedTabBarItem: UITabBarItem {
 
 public extension UIViewController {
     public var sw_animatedTabBarItem: SWAnimatedTabBarItem? {
-        if self.tabBarItem is SWAnimatedTabBarItem {
-            return (self.tabBarItem as! SWAnimatedTabBarItem)
+        if let customItem = self.tabBarItem as? SWAnimatedTabBarItem {
+            return customItem
         } else {
             return nil
         }
-        
     }
 }
 
