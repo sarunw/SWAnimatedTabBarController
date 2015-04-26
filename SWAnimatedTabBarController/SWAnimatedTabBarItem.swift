@@ -100,6 +100,19 @@ public class SWAnimatedTabBarItem: UITabBarItem {
         self.delegate?.tabBarItem(self, didChangeImage: templateImage, title: title)
     }
     
+    public override func setAnimatedBadgeHidden(hidden: Bool) {
+        self.badgeEnabled = !hidden
+    }
+    
+    public override func setAnimatedTitle(title: String?) {
+        self.sw_title = title
+    }
+    
+    public override func setAnimatedImage(image: UIImage?) {
+        let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        self.sw_image = templateImage
+    }
+    
     // TODO: wait until Apple fix this to use this
 //    override var badgeValue: String? {
 //        didSet {
@@ -114,26 +127,15 @@ public class SWAnimatedTabBarItem: UITabBarItem {
 
 public extension UITabBarItem {
     public func setAnimatedBadgeHidden(hidden: Bool) {
-        if let customItem = self as? SWAnimatedTabBarItem {
-            customItem.badgeEnabled = !hidden
-        }
     }
     
     public func setAnimatedTitle(title: String?) {
-        if let customItem = self as? SWAnimatedTabBarItem {
-            customItem.sw_title = title
-        }
     }
     
     public func setAnimatedImage(image: UIImage?) {
-        if let customItem = self as? SWAnimatedTabBarItem {
-            let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-            customItem.sw_image = templateImage
-        }
     }
     
-    public func setAnimated(image: UIImage?, title: String?) {
-        
+    public func setAnimated(image: UIImage?, title: String?) {        
     }
 }
 
