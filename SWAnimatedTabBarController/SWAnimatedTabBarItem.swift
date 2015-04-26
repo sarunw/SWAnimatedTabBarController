@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc protocol SWAnimatedTabBarItemDelegate {
+@objc public protocol SWAnimatedTabBarItemDelegate {
     func tabBarItem(item: SWAnimatedTabBarItem, didEnableBadge badgeEnabled: Bool)
     func tabBarItem(item: SWAnimatedTabBarItem, didChangeTitle title: String?)
     func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?)
@@ -16,30 +16,30 @@ import UIKit
 }
 
 
-protocol SWAnimatedTabBarItemAnimation {
+public protocol SWAnimatedTabBarItemAnimation {
     
     func playAnimation(iconView: IconView)
     func selectedState(iconView: IconView)
 }
 
-class SWItemAnimation: NSObject, SWAnimatedTabBarItemAnimation {
+public class SWItemAnimation: NSObject, SWAnimatedTabBarItemAnimation {
     
-    func playAnimation(iconView: IconView) {
+    public func playAnimation(iconView: IconView) {
         
     }
     
-    func selectedState(iconView: IconView) {
+    public func selectedState(iconView: IconView) {
         
     }
 }
 
 // MARK: Animation
-enum SWAnimatedTabBarItemContextTransitioningImageKey {
+public enum SWAnimatedTabBarItemContextTransitioningImageKey {
     case OldImage
     case NewImage
 }
 
-enum SWAnimatedTabBarItemContextTransitioningTitleKey {
+public enum SWAnimatedTabBarItemContextTransitioningTitleKey {
     case OldTitle
     case NewTitle
 }
@@ -47,7 +47,7 @@ enum SWAnimatedTabBarItemContextTransitioningTitleKey {
 /**
 *  Context used in animation
 */
-protocol SWAnimatedTabBarItemContextTransitioning {
+public protocol SWAnimatedTabBarItemContextTransitioning {
     func imageView() -> UIImageView
     func textLabel() -> UILabel
     
@@ -70,32 +70,32 @@ protocol SWAnimatedTabBarItemTransitionDelegate: class {
         tabBarItem: SWAnimatedTabBarItem) -> SWAnimatedTabBarItemAnimatedTransitioning?
 }
 
-class SWAnimatedTabBarItem: UITabBarItem {
+public class SWAnimatedTabBarItem: UITabBarItem {
     
     weak var delegate: SWAnimatedTabBarItemDelegate?
     weak var transitionDelegate: SWAnimatedTabBarItemTransitionDelegate?
     
-    @IBOutlet weak var animation: SWItemAnimation?
+    @IBOutlet public weak var animation: SWItemAnimation?
     
-    @IBInspectable var badgeEnabled: Bool = false {
+    @IBInspectable public var badgeEnabled: Bool = false {
         didSet {
             self.delegate?.tabBarItem(self, didEnableBadge: badgeEnabled)
         }
     }
     
-    @IBInspectable var sw_title: String? {
+    @IBInspectable public var sw_title: String? {
         didSet {
             self.delegate?.tabBarItem(self, didChangeTitle: sw_title)
         }
     }
     
-    @IBInspectable var sw_image: UIImage? {
+    @IBInspectable public var sw_image: UIImage? {
         didSet {
             self.delegate?.tabBarItem(self, didChangeImage: sw_image)
         }
     }
     
-    override func setAnimated(image: UIImage?, title: String?) {
+    public override func setAnimated(image: UIImage?, title: String?) {
         let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         self.delegate?.tabBarItem(self, didChangeImage: templateImage, title: title)
     }

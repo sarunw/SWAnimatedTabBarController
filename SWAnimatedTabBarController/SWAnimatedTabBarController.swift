@@ -8,13 +8,13 @@
 
 import UIKit
 
-struct IconView {
-    var icon: UIImageView
-    var textLabel: UILabel
-    var badgeView: UIView
+public struct IconView {
+    public var icon: UIImageView
+    public var textLabel: UILabel
+    public var badgeView: UIView
 }
 
-class SWAnimatedTabBarController: UITabBarController {
+public class SWAnimatedTabBarController: UITabBarController {
     var containerView: UIView!
     var tabBarItemContainerViews = [UIView]()
     var iconViews: [IconView] = Array()
@@ -27,7 +27,7 @@ class SWAnimatedTabBarController: UITabBarController {
     var newImage: UIImage?
     var newTitle: String?
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.createContainerView()
         self.createTabBarItems()
@@ -37,7 +37,7 @@ class SWAnimatedTabBarController: UITabBarController {
         setIconViewAtIndex(0, selected: true)
     }
     
-    override func viewDidLayoutSubviews() {
+    override public func viewDidLayoutSubviews() {
         println("view did load")
         containerView.frame = self.tabBar.bounds
 //        var currentIndex = 0
@@ -225,7 +225,7 @@ class SWAnimatedTabBarController: UITabBarController {
 }
 
 extension SWAnimatedTabBarController: UITabBarControllerDelegate {
-    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+    public func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
         
         if let viewControllers = tabBarController.viewControllers as? AnyObject as? NSArray {
             let index = viewControllers.indexOfObject(viewController)
@@ -244,17 +244,17 @@ extension SWAnimatedTabBarController: UITabBarControllerDelegate {
 }
 
 extension SWAnimatedTabBarController: SWAnimatedTabBarItemContextTransitioning {
-    func imageView() -> UIImageView {
+    public func imageView() -> UIImageView {
         let iconView = iconViews[animatedTabBarItemIndex]
         return iconView.icon
     }
     
-    func textLabel() -> UILabel {
+    public func textLabel() -> UILabel {
         let iconView = iconViews[animatedTabBarItemIndex]
         return iconView.textLabel
     }
     
-    func imageForKey(key: SWAnimatedTabBarItemContextTransitioningImageKey) -> UIImage? {
+    public func imageForKey(key: SWAnimatedTabBarItemContextTransitioningImageKey) -> UIImage? {
         let iconView = iconViews[animatedTabBarItemIndex]
 
         switch key {
@@ -263,7 +263,7 @@ extension SWAnimatedTabBarController: SWAnimatedTabBarItemContextTransitioning {
         }
     }
     
-    func titleForKey(key: SWAnimatedTabBarItemContextTransitioningTitleKey) -> String? {
+    public func titleForKey(key: SWAnimatedTabBarItemContextTransitioningTitleKey) -> String? {
         let iconView = iconViews[animatedTabBarItemIndex]
         
         switch key {
@@ -275,7 +275,7 @@ extension SWAnimatedTabBarController: SWAnimatedTabBarItemContextTransitioning {
     /**
     Notifies the system that the transition animation is done.
     */
-    func completeTransition() {
+    public func completeTransition() {
         let iconView = iconViews[animatedTabBarItemIndex]
         if let newImage = newImage {
             iconView.icon.image = newImage
@@ -291,7 +291,7 @@ extension SWAnimatedTabBarController: SWAnimatedTabBarItemContextTransitioning {
 }
 
 extension SWAnimatedTabBarController: SWAnimatedTabBarItemDelegate {
-    func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?, title: String?) {
+    public func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?, title: String?) {
         if let index = indexFromTabBarItem(item) {
             let iconView = iconViews[index]
             
@@ -308,7 +308,7 @@ extension SWAnimatedTabBarController: SWAnimatedTabBarItemDelegate {
         }
     }
     
-    func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?) {
+    public func tabBarItem(item: SWAnimatedTabBarItem, didChangeImage image: UIImage?) {
         if let index = indexFromTabBarItem(item) {
             let iconView = iconViews[index]
             
@@ -323,7 +323,7 @@ extension SWAnimatedTabBarController: SWAnimatedTabBarItemDelegate {
         }
     }
     
-    func tabBarItem(item: SWAnimatedTabBarItem, didChangeTitle title: String?) {
+    public func tabBarItem(item: SWAnimatedTabBarItem, didChangeTitle title: String?) {
         if let index = indexFromTabBarItem(item) {
             let iconView = iconViews[index]
             
@@ -338,7 +338,7 @@ extension SWAnimatedTabBarController: SWAnimatedTabBarItemDelegate {
         }
     }
     
-    func tabBarItem(item: SWAnimatedTabBarItem, didEnableBadge badgeEnabled: Bool) {
+    public func tabBarItem(item: SWAnimatedTabBarItem, didEnableBadge badgeEnabled: Bool) {
         if let index = indexFromTabBarItem(item) {
             let iconView = iconViews[index]
             if badgeEnabled {

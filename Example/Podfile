@@ -1,4 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
-pod "SWAnimatedTabBarController", :path => "../"
+target 'SWAnimatedTabBarControllerExample' do
+    pod "SWAnimatedTabBarController", :path => "../"
+end
+
+#pod "SWAnimatedTabBarController", git: 'https://github.com/sarunw/SWAnimatedTabBarController'

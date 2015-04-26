@@ -13,8 +13,8 @@
   },
   "social_media_url": "https://twitter.com/sarunw",
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "SWAnimatedTabBarController/**/*"
+  "source_files": "SWAnimatedTabBarController/**/*.swift"
 }

@@ -17,24 +17,24 @@
 		A03BAA661AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BAA651AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift */; };
 		A091C91C1AEA594800BD080B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A091C9191AEA594800BD080B /* LICENSE */; };
 		A091C91E1AEA594800BD080B /* SWAnimatedTabBarController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A091C91B1AEA594800BD080B /* SWAnimatedTabBarController.podspec */; };
-		FDDC37C7BBE120D60F1CF3E4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552F105A380890100B3D2E9B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FDB46A3A2D1526425DB39F57 /* Pods_SWAnimatedTabBarControllerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB3F5787D02DFCEFA5B1F0 /* Pods_SWAnimatedTabBarControllerExample.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A03BAA601AE90071002E5110 /* PBXContainerItemProxy */ = {
+		A0AC24071AEC230B00F6DAA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A03BAA401AE90070002E5110 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A03BAA471AE90070002E5110;
-			remoteInfo = SWAnimatedTabBarController;
+			remoteInfo = SWAnimatedTabBarControllerExample;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11D7637147D4401812E41CB2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		552F105A380890100B3D2E9B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CEB3F5787D02DFCEFA5B1F0 /* Pods_SWAnimatedTabBarControllerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWAnimatedTabBarControllerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5128327EE339F3345210DC5A /* Pods-SWAnimatedTabBarControllerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAnimatedTabBarControllerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWAnimatedTabBarControllerExample/Pods-SWAnimatedTabBarControllerExample.release.xcconfig"; sourceTree = "<group>"; };
 		A00DAB4A1AE97311009AFAA3 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		A03BAA481AE90070002E5110 /* SWAnimatedTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAnimatedTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03BAA481AE90070002E5110 /* SWAnimatedTabBarControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAnimatedTabBarControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BAA4C1AE90070002E5110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03BAA4D1AE90070002E5110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A03BAA4F1AE90070002E5110 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -42,13 +42,13 @@
 		A03BAA541AE90070002E5110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A03BAA561AE90070002E5110 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A03BAA591AE90070002E5110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A03BAA5F1AE90071002E5110 /* SWAnimatedTabBarControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWAnimatedTabBarControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03BAA5F1AE90071002E5110 /* SWAnimatedTabBarControllerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWAnimatedTabBarControllerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BAA641AE90071002E5110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03BAA651AE90071002E5110 /* SWAnimatedTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAnimatedTabBarControllerTests.swift; sourceTree = "<group>"; };
 		A091C9191AEA594800BD080B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A091C91A1AEA594800BD080B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A091C91B1AEA594800BD080B /* SWAnimatedTabBarController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SWAnimatedTabBarController.podspec; path = ../SWAnimatedTabBarController.podspec; sourceTree = "<group>"; };
-		F23B7638655A27E571A14B55 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D0C0E14BB42FE9CDF763B00C /* Pods-SWAnimatedTabBarControllerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAnimatedTabBarControllerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWAnimatedTabBarControllerExample/Pods-SWAnimatedTabBarControllerExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDC37C7BBE120D60F1CF3E4 /* Pods.framework in Frameworks */,
+				FDB46A3A2D1526425DB39F57 /* Pods_SWAnimatedTabBarControllerExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,8 +73,8 @@
 		15048B8FD25D698C230502C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F23B7638655A27E571A14B55 /* Pods.debug.xcconfig */,
-				11D7637147D4401812E41CB2 /* Pods.release.xcconfig */,
+				D0C0E14BB42FE9CDF763B00C /* Pods-SWAnimatedTabBarControllerExample.debug.xcconfig */,
+				5128327EE339F3345210DC5A /* Pods-SWAnimatedTabBarControllerExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -82,7 +82,7 @@
 		67FBB621AA8AD21E82C0FBF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				552F105A380890100B3D2E9B /* Pods.framework */,
+				0CEB3F5787D02DFCEFA5B1F0 /* Pods_SWAnimatedTabBarControllerExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,8 +102,8 @@
 		A03BAA491AE90070002E5110 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A03BAA481AE90070002E5110 /* SWAnimatedTabBarController.app */,
-				A03BAA5F1AE90071002E5110 /* SWAnimatedTabBarControllerTests.xctest */,
+				A03BAA481AE90070002E5110 /* SWAnimatedTabBarControllerExample.app */,
+				A03BAA5F1AE90071002E5110 /* SWAnimatedTabBarControllerExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A03BAA471AE90070002E5110 /* SWAnimatedTabBarController */ = {
+		A03BAA471AE90070002E5110 /* SWAnimatedTabBarControllerExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A03BAA691AE90071002E5110 /* Build configuration list for PBXNativeTarget "SWAnimatedTabBarController" */;
+			buildConfigurationList = A03BAA691AE90071002E5110 /* Build configuration list for PBXNativeTarget "SWAnimatedTabBarControllerExample" */;
 			buildPhases = (
 				159F3711EB8931E0D535B005 /* Check Pods Manifest.lock */,
 				A03BAA441AE90070002E5110 /* Sources */,
@@ -176,14 +176,14 @@
 			);
 			dependencies = (
 			);
-			name = SWAnimatedTabBarController;
+			name = SWAnimatedTabBarControllerExample;
 			productName = SWAnimatedTabBarController;
-			productReference = A03BAA481AE90070002E5110 /* SWAnimatedTabBarController.app */;
+			productReference = A03BAA481AE90070002E5110 /* SWAnimatedTabBarControllerExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A03BAA5E1AE90071002E5110 /* SWAnimatedTabBarControllerTests */ = {
+		A03BAA5E1AE90071002E5110 /* SWAnimatedTabBarControllerExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A03BAA6C1AE90071002E5110 /* Build configuration list for PBXNativeTarget "SWAnimatedTabBarControllerTests" */;
+			buildConfigurationList = A03BAA6C1AE90071002E5110 /* Build configuration list for PBXNativeTarget "SWAnimatedTabBarControllerExampleTests" */;
 			buildPhases = (
 				A03BAA5B1AE90071002E5110 /* Sources */,
 				A03BAA5C1AE90071002E5110 /* Frameworks */,
@@ -192,11 +192,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				A03BAA611AE90071002E5110 /* PBXTargetDependency */,
+				A0AC24081AEC230B00F6DAA2 /* PBXTargetDependency */,
 			);
-			name = SWAnimatedTabBarControllerTests;
+			name = SWAnimatedTabBarControllerExampleTests;
 			productName = SWAnimatedTabBarControllerTests;
-			productReference = A03BAA5F1AE90071002E5110 /* SWAnimatedTabBarControllerTests.xctest */;
+			productReference = A03BAA5F1AE90071002E5110 /* SWAnimatedTabBarControllerExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A03BAA431AE90070002E5110 /* Build configuration list for PBXProject "SWAnimatedTabBarController" */;
+			buildConfigurationList = A03BAA431AE90070002E5110 /* Build configuration list for PBXProject "SWAnimatedTabBarControllerExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -230,8 +230,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A03BAA471AE90070002E5110 /* SWAnimatedTabBarController */,
-				A03BAA5E1AE90071002E5110 /* SWAnimatedTabBarControllerTests */,
+				A03BAA471AE90070002E5110 /* SWAnimatedTabBarControllerExample */,
+				A03BAA5E1AE90071002E5110 /* SWAnimatedTabBarControllerExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWAnimatedTabBarControllerExample/Pods-SWAnimatedTabBarControllerExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		85F74019850BA957F574EFB8 /* Embed Pods Frameworks */ = {
@@ -301,7 +301,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWAnimatedTabBarControllerExample/Pods-SWAnimatedTabBarControllerExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -329,10 +329,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A03BAA611AE90071002E5110 /* PBXTargetDependency */ = {
+		A0AC24081AEC230B00F6DAA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A03BAA471AE90070002E5110 /* SWAnimatedTabBarController */;
-			targetProxy = A03BAA601AE90071002E5110 /* PBXContainerItemProxy */;
+			target = A03BAA471AE90070002E5110 /* SWAnimatedTabBarControllerExample */;
+			targetProxy = A0AC24071AEC230B00F6DAA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -439,23 +439,23 @@
 		};
 		A03BAA6A1AE90071002E5110 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F23B7638655A27E571A14B55 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = D0C0E14BB42FE9CDF763B00C /* Pods-SWAnimatedTabBarControllerExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SWAnimatedTabBarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SWAnimatedTabBarControllerExample;
 			};
 			name = Debug;
 		};
 		A03BAA6B1AE90071002E5110 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11D7637147D4401812E41CB2 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 5128327EE339F3345210DC5A /* Pods-SWAnimatedTabBarControllerExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SWAnimatedTabBarController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SWAnimatedTabBarControllerExample;
 			};
 			name = Release;
 		};
@@ -473,8 +473,8 @@
 				);
 				INFOPLIST_FILE = SWAnimatedTabBarControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWAnimatedTabBarController.app/SWAnimatedTabBarController";
+				PRODUCT_NAME = SWAnimatedTabBarControllerExampleTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWAnimatedTabBarControllerExample.app/SWAnimatedTabBarControllerExample";
 			};
 			name = Debug;
 		};
@@ -488,15 +488,15 @@
 				);
 				INFOPLIST_FILE = SWAnimatedTabBarControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWAnimatedTabBarController.app/SWAnimatedTabBarController";
+				PRODUCT_NAME = SWAnimatedTabBarControllerExampleTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SWAnimatedTabBarControllerExample.app/SWAnimatedTabBarControllerExample";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A03BAA431AE90070002E5110 /* Build configuration list for PBXProject "SWAnimatedTabBarController" */ = {
+		A03BAA431AE90070002E5110 /* Build configuration list for PBXProject "SWAnimatedTabBarControllerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A03BAA671AE90071002E5110 /* Debug */,
@@ -505,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A03BAA691AE90071002E5110 /* Build configuration list for PBXNativeTarget "SWAnimatedTabBarController" */ = {
+		A03BAA691AE90071002E5110 /* Build configuration list for PBXNativeTarget "SWAnimatedTabBarControllerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A03BAA6A1AE90071002E5110 /* Debug */,
@@ -514,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A03BAA6C1AE90071002E5110 /* Build configuration list for PBXNativeTarget "SWAnimatedTabBarControllerTests" */ = {
+		A03BAA6C1AE90071002E5110 /* Build configuration list for PBXNativeTarget "SWAnimatedTabBarControllerExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A03BAA6D1AE90071002E5110 /* Debug */,

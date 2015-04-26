@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SWAnimatedTabBarController: 7d95db1bd11502746a9ed9c978b3300ccfb530d7
+  SWAnimatedTabBarController: 1b76d1f98f628a0d9a6d9dd3108708323186530f
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.36.4
