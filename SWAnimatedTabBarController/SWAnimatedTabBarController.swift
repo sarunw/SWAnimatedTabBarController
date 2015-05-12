@@ -37,7 +37,7 @@ public class SWAnimatedTabBarController: UITabBarController {
     
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        setIconViewAtIndex(0, selected: true)
+        setIconViewAtIndex(self.selectedIndex, selected: true)
     }
     
     override public func viewDidLayoutSubviews() {
