@@ -96,8 +96,19 @@ public class SWAnimatedTabBarItem: UITabBarItem {
     }
     
     public func setAnimated(image: UIImage?, title: String?) {
+        
         let templateImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+//        self.sw_title = title
+//        self.sw_image = templateImage
+
         self.delegate?.tabBarItem(self, didChangeImage: templateImage, title: title)
+        
+        // Prevent delegate to fire individually
+        let delegate = self.delegate
+        self.delegate = nil
+        self.sw_title = title
+        self.sw_image = templateImage
+        self.delegate = delegate
     }
     
     public func setAnimatedBadgeHidden(hidden: Bool) {

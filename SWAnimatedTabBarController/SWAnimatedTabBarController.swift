@@ -133,14 +133,28 @@ public class SWAnimatedTabBarController: UITabBarController {
                 
                 // Icon, prefered 25x25 or 30x30 for circle
                 let iconImageView = UIImageView()
-                iconImageView.image = tabBarItem.image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+                
+                if let customItem = tabBarItem as? SWAnimatedTabBarItem,
+                    let image = customItem.sw_image {
+                    iconImageView.image = image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+                } else {
+                    iconImageView.image = tabBarItem.image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+                }
+                
                 iconImageView.tintColor = deselectedColor
                 iconImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
                 
                 // Text
                 let textLabel = UILabel()
                 textLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
-                textLabel.text = tabBarItem.title
+                
+                if let customItem = tabBarItem as? SWAnimatedTabBarItem,
+                   let title = customItem.sw_title {
+                    textLabel.text = title
+                } else {
+                    textLabel.text = tabBarItem.title
+                }
+                
                 textLabel.textColor = deselectedColor
                 textLabel.font = UIFont.systemFontOfSize(10)
                 textLabel.textAlignment = .Center
