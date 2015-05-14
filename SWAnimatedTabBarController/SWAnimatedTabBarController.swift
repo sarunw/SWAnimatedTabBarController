@@ -149,7 +149,7 @@ public class SWAnimatedTabBarController: UITabBarController {
                 textLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
                 
                 if let customItem = tabBarItem as? SWAnimatedTabBarItem,
-                   let title = customItem.sw_title {
+                   let title = customItem.sw_title where !title.isEmpty {
                     textLabel.text = title
                 } else {
                     textLabel.text = tabBarItem.title
