@@ -16,7 +16,7 @@ class SWPopAnimation: SWItemAnimation {
         let delay: NSTimeInterval = 0
         
         animatedView.transform = CGAffineTransformMakeScale(1, 1)
-        UIView.animateKeyframesWithDuration(duration, delay: delay, options: nil, animations: { () -> Void in
+        UIView.animateKeyframesWithDuration(duration, delay: delay, options: [], animations: { () -> Void in
             UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: frameDuration, animations: { () -> Void in
                 animatedView.transform = CGAffineTransformMakeScale(1.2, 1.2)
             })

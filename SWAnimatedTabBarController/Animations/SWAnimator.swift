@@ -21,7 +21,7 @@ class SWAnimator: SWAnimatedTabBarItemAnimatedTransitioning {
             }, completion: { (finished) -> Void in
                 imageView.image = newImage
                 
-                UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: nil, animations: { () -> Void in
+                UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: [], animations: { () -> Void in
                     imageView.transform = CGAffineTransformIdentity
                 }, completion: { (finished) -> Void in
                     transitionContext.completeTransition()
@@ -43,7 +43,7 @@ class SWAnimator: SWAnimatedTabBarItemAnimatedTransitioning {
                 }, completion: { (finished) -> Void in
                     imageView.image = newImage
                     
-                    UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: nil, animations: { () -> Void in
+                    UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.2, options: [], animations: { () -> Void in
                         imageView.transform = CGAffineTransformIdentity
                         }, completion: { (finished) -> Void in
                             transitionContext.completeTransition()

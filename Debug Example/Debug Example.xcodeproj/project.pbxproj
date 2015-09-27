@@ -188,6 +188,8 @@
 		A0AC240A1AECAAE400F6DAA2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Sarun Wongpatcharapakorn";
 				TargetAttributes = {
@@ -446,6 +448,7 @@
 				A0AC24351AECAAE500F6DAA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0AC24361AECAAE500F6DAA2 /* Build configuration list for PBXNativeTarget "Debug ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +457,7 @@
 				A0AC24381AECAAE500F6DAA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

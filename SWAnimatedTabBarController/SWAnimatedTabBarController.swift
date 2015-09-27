@@ -41,7 +41,7 @@ public class SWAnimatedTabBarController: UITabBarController {
     }
     
     override public func viewDidLayoutSubviews() {
-        println("view did load")
+        print("view did load")
         containerView.frame = self.tabBar.bounds
 //        var currentIndex = 0
 //        for tabBarButton in self.tabBar.subviews {
@@ -70,12 +70,14 @@ public class SWAnimatedTabBarController: UITabBarController {
     }
     
     func setTabBarItemDelegate() {
-        if let items = tabBar.items as? [UITabBarItem] {
-            for item in items {
-                if let customItem = item as? SWAnimatedTabBarItem {
-                    customItem.delegate = self
-                    customItem.transitionDelegate = self
-                }
+        guard let items = tabBar.items else {
+            return
+        }
+
+        for item in items {
+            if let customItem = item as? SWAnimatedTabBarItem {
+                customItem.delegate = self
+                customItem.transitionDelegate = self
             }
         }
     }
@@ -104,8 +106,8 @@ public class SWAnimatedTabBarController: UITabBarController {
                 }
             }
             formatString += "-(0)-|"
-            println(formatString)
-            let constraints = NSLayoutConstraint.constraintsWithVisualFormat(formatString, options: nil, metrics: nil, views: views)
+            print(formatString)
+            let constraints = NSLayoutConstraint.constraintsWithVisualFormat(formatString, options: [], metrics: nil, views: views)
             containerView.addConstraints(constraints)
         }
     }
@@ -113,12 +115,12 @@ public class SWAnimatedTabBarController: UITabBarController {
     func createTabBarItemContainer() -> UIView {
         let tabBarItemContainerView = UIView()
         tabBarItemContainerView.userInteractionEnabled = false
-        tabBarItemContainerView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        tabBarItemContainerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(tabBarItemContainerView)
         
         let views = ["view": tabBarItemContainerView]
 
-        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: nil, metrics: nil, views: views)
+        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: [], metrics: nil, views: views)
         containerView.addConstraints(vConstraints)
         
         return tabBarItemContainerView
@@ -126,63 +128,65 @@ public class SWAnimatedTabBarController: UITabBarController {
     
     
     func createTabBarItems() {
-        if let items = tabBar.items as? [UITabBarItem]
-        {
-            for (index, tabBarItem) in enumerate(items) {
-                let container = tabBarItemContainerViews[index]
-                
-                // Icon, prefered 25x25 or 30x30 for circle
-                let iconImageView = UIImageView()
-                
-                if let customItem = tabBarItem as? SWAnimatedTabBarItem,
-                    let image = customItem.sw_image {
-                    iconImageView.image = image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-                } else {
-                    iconImageView.image = tabBarItem.image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-                }
-                
-                iconImageView.tintColor = deselectedColor
-                iconImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
-                
-                // Text
-                let textLabel = UILabel()
-                textLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
-                
-                if let customItem = tabBarItem as? SWAnimatedTabBarItem,
-                   let title = customItem.sw_title where !title.isEmpty {
-                    textLabel.text = title
-                } else {
-                    textLabel.text = tabBarItem.title
-                }
-                
-                textLabel.textColor = deselectedColor
-                textLabel.font = UIFont.systemFontOfSize(10)
-                textLabel.textAlignment = .Center
-                
-                let badgeView = UIView()
-                badgeView.layer.cornerRadius = 4
-                badgeView.layer.masksToBounds = true
-                badgeView.backgroundColor = selectedColor
-                badgeView.userInteractionEnabled = false
-                badgeView.setTranslatesAutoresizingMaskIntoConstraints(false)
-                if let customItem = tabBarItem as? SWAnimatedTabBarItem {
-                    badgeView.hidden = !customItem.badgeEnabled
-                } else {
-                    badgeView.hidden = (tabBarItem.badgeValue == nil) ? true : false
-                }
-
+        guard let items = tabBar.items else {
+            return
+        }
         
-                container.addSubview(badgeView)
-                container.addSubview(iconImageView)
-                container.addSubview(textLabel)
-                
-                createBadgeConstraints(badgeView, parent: container, centerXOffset: 18, yOffset: 11)
-                createConstraints(iconImageView, parent: container, yOffset: 18)
-                createConstraints(textLabel, parent: container, yOffset: 41)
-                
-                let iconView = IconView(icon: iconImageView, textLabel: textLabel, badgeView: badgeView)
-                iconViews.append(iconView)
+
+        for (index, tabBarItem) in items.enumerate() {
+            let container = tabBarItemContainerViews[index]
+            
+            // Icon, prefered 25x25 or 30x30 for circle
+            let iconImageView = UIImageView()
+            
+            if let customItem = tabBarItem as? SWAnimatedTabBarItem,
+                let image = customItem.sw_image {
+                iconImageView.image = image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+            } else {
+                iconImageView.image = tabBarItem.image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
             }
+            
+            iconImageView.tintColor = deselectedColor
+            iconImageView.translatesAutoresizingMaskIntoConstraints = false
+            
+            // Text
+            let textLabel = UILabel()
+            textLabel.translatesAutoresizingMaskIntoConstraints = false
+            
+            if let customItem = tabBarItem as? SWAnimatedTabBarItem,
+               let title = customItem.sw_title where !title.isEmpty {
+                textLabel.text = title
+            } else {
+                textLabel.text = tabBarItem.title
+            }
+            
+            textLabel.textColor = deselectedColor
+            textLabel.font = UIFont.systemFontOfSize(10)
+            textLabel.textAlignment = .Center
+            
+            let badgeView = UIView()
+            badgeView.layer.cornerRadius = 4
+            badgeView.layer.masksToBounds = true
+            badgeView.backgroundColor = selectedColor
+            badgeView.userInteractionEnabled = false
+            badgeView.translatesAutoresizingMaskIntoConstraints = false
+            if let customItem = tabBarItem as? SWAnimatedTabBarItem {
+                badgeView.hidden = !customItem.badgeEnabled
+            } else {
+                badgeView.hidden = (tabBarItem.badgeValue == nil) ? true : false
+            }
+
+    
+            container.addSubview(badgeView)
+            container.addSubview(iconImageView)
+            container.addSubview(textLabel)
+            
+            createBadgeConstraints(badgeView, parent: container, centerXOffset: 18, yOffset: 11)
+            createConstraints(iconImageView, parent: container, yOffset: 18)
+            createConstraints(textLabel, parent: container, yOffset: 41)
+            
+            let iconView = IconView(icon: iconImageView, textLabel: textLabel, badgeView: badgeView)
+            iconViews.append(iconView)
         }
     }
     
@@ -212,16 +216,18 @@ public class SWAnimatedTabBarController: UITabBarController {
         let textLabel = iconView.textLabel
         
         if selected {
+            guard let items = tabBar.items else {
+                return
+            }
             // deselect others
-            if let items = self.tabBar.items as? [UITabBarItem] {
-                for (index, tabBarItem) in enumerate(items) {
-                    let iconView = iconViews[index]
-                    let imageView = iconView.icon
-                    let textLabel = iconView.textLabel
-                    
-                    imageView.tintColor = deselectedColor
-                    textLabel.textColor = deselectedColor
-                }
+            
+            for (index, _) in items.enumerate() {
+                let iconView = iconViews[index]
+                let imageView = iconView.icon
+                let textLabel = iconView.textLabel
+                
+                imageView.tintColor = deselectedColor
+                textLabel.textColor = deselectedColor
             }
         }
         
