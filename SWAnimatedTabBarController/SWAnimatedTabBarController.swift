@@ -43,6 +43,11 @@ public class SWAnimatedTabBarController: UITabBarController {
     override public func viewDidLayoutSubviews() {
         print("view did load")
         containerView.frame = self.tabBar.bounds
+        if let items = self.tabBar.items {
+            // Make icons spread equally along the width instead of grouped center
+            self.tabBar.itemWidth = self.tabBar.bounds.width / CGFloat(items.count)
+            self.tabBar.itemSpacing = 1
+        }
 //        var currentIndex = 0
 //        for tabBarButton in self.tabBar.subviews {
 //            println("tabBarButton \(tabBarButton)")
